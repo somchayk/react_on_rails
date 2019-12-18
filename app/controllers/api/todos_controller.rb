@@ -5,7 +5,7 @@ class Api::TodosController < ApplicationController
   end
 
   def create
-    @todo = Todo.new(todo_oarams)
+    @todo = Todo.new(todo_params)
     if @todo.save
       render json: @todo
     else
